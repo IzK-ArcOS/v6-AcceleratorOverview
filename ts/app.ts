@@ -1,23 +1,24 @@
-import { DefaultIcon } from "$ts/images/apps";
-import { Runtime } from "./runtime";
-import AppSvelte from "../App.svelte";
+import { KeyboardIcon } from "$ts/images/general";
 import { App } from "$types/app";
+import AppSvelte from "../App.svelte";
+import { Runtime } from "./runtime";
 
-export const app: App = {
+export const KeyboardShortcuts: App = {
   metadata: {
-    name: "App Template",
-    description: "This is an app template",
+    name: "Keyboard Shortcuts",
+    description: "View the keyboard shortcuts in ArcOS",
     author: "The ArcOS Team",
-    version: "0.0.0",
-    icon: DefaultIcon
+    version: "1.0.0",
+    icon: KeyboardIcon,
+    hidden: true
   },
   runtime: Runtime,
   content: AppSvelte,
-  id: "appTemplate",
-  size: { w: 0, h: 0 },
-  minSize: { w: 0, h: 0 },
-  maxSize: { w: 0, h: 0 },
-  pos: { x: 0, y: 0 },
+  id: "KeyboardShortcuts",
+  size: { w: 1000, h: 750 },
+  minSize: { w: 1000, h: 750 },
+  maxSize: { w: 1000, h: 750 },
+  pos: { x: 60, y: 60 },
   state: {
     minimized: false,
     maximized: false,
@@ -26,8 +27,9 @@ export const app: App = {
     resizable: false
   },
   controls: {
-    minimize: false,
-    maximize: false,
-    close: false
-  }
+    minimize: true,
+    maximize: true,
+    close: true
+  },
+  singleInstance: true
 }
