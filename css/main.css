@@ -76,7 +76,6 @@
 }
 
 #KeyboardShortcuts > div.body div.shortcuts div.app div.description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  width: 270px;
 }
