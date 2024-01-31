@@ -24,7 +24,6 @@ export class Runtime extends AppRuntime {
   }
 
   public populate(v: Map<string, App>) {
-    console.log(`Populating!`, v)
     const store: [string, [string[], string][]][] = [];
 
     for (const [_, app] of [...v]) {
@@ -42,7 +41,5 @@ export class Runtime extends AppRuntime {
     }
 
     this.store.set(store);
-
-    console.log(store);
   }
 }
