@@ -10,7 +10,7 @@ export const KeyboardShortcuts: App = {
     author: "The ArcOS Team",
     version: "1.0.0",
     icon: KeyboardIcon,
-    hidden: true
+    hidden: true,
   },
   runtime: Runtime,
   content: AppSvelte,
@@ -24,12 +24,12 @@ export const KeyboardShortcuts: App = {
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: {
     minimize: true,
     maximize: true,
-    close: true
+    close: true,
   },
-  singleInstance: true
-}
+  singleInstance: true,
+};

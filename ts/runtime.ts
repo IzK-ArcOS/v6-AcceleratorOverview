@@ -7,7 +7,7 @@ import type { App, AppMutator } from "$types/app";
 
 export class Runtime extends AppRuntime {
   // S<R<id, R<accelerator, description>>>
-  public store = Store<[string, [string[], string][]][]>()
+  public store = Store<[string, [string[], string][]][]>();
 
   constructor(app: App, mutator: AppMutator, process: Process) {
     super(app, mutator, process);
@@ -15,10 +15,9 @@ export class Runtime extends AppRuntime {
     process.accelerator.store.push({
       key: "escape",
       action() {
-        if (app.isOverlay)
-          process.handler.kill(process.pid, true);
-      }
-    })
+        if (app.isOverlay) process.handler.kill(process.pid, true);
+      },
+    });
 
     appLibrary.subscribe((v) => this.populate(v));
   }
@@ -34,7 +33,7 @@ export class Runtime extends AppRuntime {
       let shortcuts = [];
 
       for (const string of strings) {
-        shortcuts.push([splitAcceleratorString(string), app.acceleratorDescriptions[string]])
+        shortcuts.push([splitAcceleratorString(string), app.acceleratorDescriptions[string]]);
       }
 
       store.push([app.metadata.name, shortcuts]);
