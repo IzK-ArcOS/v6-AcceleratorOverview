@@ -12,7 +12,7 @@ export const KeyboardShortcuts: App = {
     version: "1.0.0",
     icon: KeyboardIcon,
     hidden: true,
-    dependendsOn: ["ArcShell"],
+    dependsOn: ["ArcShell"],
   },
   runtime: Runtime,
   content: AppSvelte,
