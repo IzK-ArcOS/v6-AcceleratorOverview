@@ -4,6 +4,7 @@ import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
 import { Runtime } from "./runtime";
 
+// Application Metadata
 export const KeyboardShortcuts: App = {
   metadata: {
     name: "Keyboard Shortcuts",
